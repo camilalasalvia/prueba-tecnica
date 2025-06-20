@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+.btn {
+  border: none;
+  padding: 4px 8px;
+  transition: background-color 0.1s linear;
+  border-radius: 6px;
+}
+
+.btn.btn-primary {
+  background-color: #fda5d5;
+  color: #ffffff;
+}
+
+.btn.btn-primary:not([disabled]):hover {
+  background-color: #f472b6;
+}
