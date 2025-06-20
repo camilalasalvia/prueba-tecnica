@@ -2,6 +2,17 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.7.
 
+## Installation
+
+To set up the project locally, follow these steps:
+
+```bash
+npm install    # Installs all project dependencies
+npm start      # Alias for 'ng serve' to start the development server
+```
+
+Then open your browser and navigate to http://localhost:4200/. The application will automatically reload whenever you modify any of the source files.
+
 ## Development server
 
 To start a local development server, run:
