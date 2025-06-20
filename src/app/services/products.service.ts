@@ -26,6 +26,14 @@ export class ProductsService {
     this.products.push(newProduct);
   }
 
+  editProduct(product: Product): void {
+    const editedProduct = this.products.find(p => p.id === product.id)!;
+    editedProduct.name = product.name;
+    editedProduct.price = product.price;
+    editedProduct.email = product.email;
+    editedProduct.date = product.date;
+  }
+
   deleteProduct(productId: number): void {
     this.products = this.products.filter(p => p.id !== productId);
   }

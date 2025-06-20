@@ -49,15 +49,11 @@
         />
       </div>
 
-      <button (click)="redirectToProducts()">Atras</button>
       <!-- Botón -->
-      <div class="flex justify-end mt-4">
-        <button 
-          type="submit"
-          class="btn btn-primary"
-          [disabled]="!canSaveCreationEdition()"
-        >
-          Crear producto
+      <div class="flex justify-between mt-4">
+        <button (click)="redirectToProducts()" class="btn btn-primary">Atras</button>
+        <button type="submit" class="btn btn-primary" [disabled]="!canSaveCreationEdition()">
+          Guardar
         </button>
       </div>
 

@@ -2,16 +2,21 @@
 
 .btn {
   border: none;
-  padding: 4px 8px;
+  padding: 8px 10px;
   transition: background-color 0.1s linear;
-  border-radius: 6px;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 .btn.btn-primary {
   background-color: #fda5d5;
-  color: #ffffff;
+  color: #000000;
 }
 
 .btn.btn-primary:not([disabled]):hover {
   background-color: #f472b6;
+}
+
+.btn.btn-primary:disabled {
+  background-color: #e2e2e2;
 }

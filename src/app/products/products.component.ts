@@ -7,8 +7,7 @@ import { Product } from '../models/Product';
 @Component({
   selector: 'app-products',
   imports: [CommonModule],
-  templateUrl: './products.component.html',
-  styleUrl: './products.component.css'
+  templateUrl: './products.component.html'
 })
 export default class ProductsComponent implements OnInit {
   products: Product[];

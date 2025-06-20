@@ -7,8 +7,7 @@ import { ProductsService } from '../../services/products.service';
 @Component({
   selector: 'app-create-edit-product',
   imports: [FormsModule],
-  templateUrl: './create-edit-product.component.html',
-  styleUrl: './create-edit-product.component.css'
+  templateUrl: './create-edit-product.component.html'
 })
 export default class CreateEditProductComponent implements OnInit {
   product: Product;
@@ -37,7 +36,14 @@ export default class CreateEditProductComponent implements OnInit {
   }
 
   saveCreationEdition(): void {
-    this._productService.createProduct(this.product);
+    if(this.isEditing) {
+      this._productService.editProduct(this.product);
+      this.redirectToProducts();
+    } 
+    else {
+      this._productService.createProduct(this.product);
+      this.product = new Product();
+    }
   }
 
   canSaveCreationEdition(): boolean {
